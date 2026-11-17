@@ -47,3 +47,53 @@ table {
 	border-spacing: 0;
 }
 
+
+/********************************************************
+                    DEFAULT STYLES
+*********************************************************/
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: royalblue;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid darkblue;
+}
+
+article div {
+    background-color: royalblue;
+    border: 2px solid darkslateblue;
+    font-size: 32px;
+    font-weight: bold;
+
+    /* flexbox CAN be used inside grids */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/********************************************************
+                    GRID STYLES
+*********************************************************/
+
+
+section.one article {
+    /* like flexbox, you have to declare a parent element to hold the grid */
+    display: grid;
+
+    /* fr stands for fraction - it tells the column or row to take up a portion of the available space */
+    grid-template-columns: 1fr 1fr;
+
+    /* the explicit grid is what you define, the implicit grid is what the browser figures out based on content that spills outside of your defind explicit grid in the example below, the third row won't have any height */
+    grid-template-rows: 120px 120px;
+}
